@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <img src="bootstrap_logo.png" alt="Bootstrap Logo">
+            <h2>Email Verification</h2>
+            <p>An email containing a verification code has been sent to your email address. Please enter the code below:</p>
+            <input type="text" id="verificationCode" placeholder="Verification Code" required>
+            <button type="submit" onclick="verifyCode()">Verify</button>
+        </form>
+    </div>
+    <script>
+        function verifyCode() {
+            let codeInput = document.getElementById("verificationCode").value;
+            let correctCode = "123456";
+
+            // if (codeInput === correctCode) {
+            //     alert("Verification successful!");
+            // } else {
+            //     alert("Verification code is incorrect. Please try again.");
+            // }
+            codeInput === correctCode ? alert("Verification successful!") : alert("Verification code is incorrect. Please try again.");
+        }
+    </script>
+</body>
+</html>

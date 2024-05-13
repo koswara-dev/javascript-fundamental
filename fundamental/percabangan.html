@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percabangan</title>
+  </head>
+  <body>
+    <p>Open Console</p>
+    <script>
+      // buatkan program mengecek bilangan ganjil atau genap
+      let angka = 7;
+      if (angka % 2 == 0) {
+        // 7 % 2 = 1 == 0 (false)
+        console.log("bilangan genap");
+      } else {
+        console.log("bilangan ganjil");
+      }
+      // output bilangan genap
+
+      //
+      let now = new Date("2024-05-04");
+      let dayOfWeek = now.getDay();
+      if (dayOfWeek == 0 || dayOfWeek == 6) { // 0 == 0 || 0 == 6
+        console.log("weekend");
+      } else {
+        console.log("weekday");
+      }
+
+      // jika usia minimal 17 dan berat badan minimal 55 maka bisa donor darah
+      let usia = 17;
+      let beratBadan = 54;
+      if (usia >= 17 && beratBadan >= 55) {
+        // true && true (true)
+        console.log("bisa donor darah");
+      } else {
+        console.log("belum bisa donor karena usia < 17");
+      }
+      // console.log("belum bisa donor karena berat badan < 55")
+
+      // switch
+      console.log(dayOfWeek);
+
+      // check isLogin
+      let isLogin = false;
+      if (isLogin) {
+        console.log("Matching Redemption Code and Prakerja ID");
+      } else {
+        console.log("Redirect Login Page, input username and password");
+      }
+
+      let checkLogin = isLogin ? "Matching Redemption Code and Prakerja ID" : "Redirect Login Page, input username and password";
+      console.log(checkLogin);
+
+    </script>
+  </body>
+</html>

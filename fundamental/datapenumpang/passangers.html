@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Data Penumpang Kereta Api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Data Penumpang</h1>
+        <input id="searchInput" oninput="searchPassanger()" type="text" placeholder="Search Data">
+        <ul></ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody id="passengerList"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

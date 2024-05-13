@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi</title>
+  </head>
+  <body>
+    <p>Open Console</p>
+    <script>
+      // fungsi menampilkan informasi user
+      function displayUser(name, age, address) {
+        console.log(name);
+        console.log(age);
+        console.log(address);
+      }
+
+      let inputName = "JuaraCoding";
+      let inputAge = 24;
+      let inputAddress = "Jakarta";
+      displayUser(inputName, inputAge, inputAddress);
+
+      // halaman lainnya
+      displayUser("JuaraCodingDua", 28, "Surabaya");
+
+      // fungsi hitung pajak 12% (pph), minimal salary 7000
+      //   let salary = 7000;
+
+      function calculateTax(salary) {
+        if (salary >= 7000) {
+          // hitung pajak 12%
+          let tax = salary * 0.12;
+          console.log("Pajak = "+tax);
+        } else {
+          console.log("Belum wajib pajak");
+        }
+      }
+
+      calculateTax(7000);
+      calculateTax(6000);
+
+      
+      function welcome(name = "Guest") {
+        console.log("Selamat Datang, "+name);
+      }
+
+      welcome();
+      welcome("JuaraCoding");
+      // substring
+      let text = "JavaScript";
+      console.log(text.substring(0,5)); // JavaS
+      console.log(text.substring(4)); // Script
+
+      // return
+      function getProductName(name = ""){
+        return name;
+      }
+      console.log(getProductName("Keyboard"));
+
+      function login(username, password) {
+        let isLogin = username == "admin" && password == "admin123";
+        // if(isLogin){
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        return isLogin ? true : false;
+      }
+
+      console.log(login("admin2", "admin123")); // true or false
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perulangan</title>
+  </head>
+  <body>
+    <p>Open Console</p>
+    <script>
+      console.log("--while dan do while--");
+      let count = 0;
+      while (count < 5) {
+        // 4 < 5 (true)
+        if (count == 4) {
+          console.log(count);
+        }
+        count++;
+      }
+      console.log("-----");
+      let x = 0;
+      do {
+        x++; // 5
+        console.log(x); // 5
+      } while (x < 5); // 4 < 5 (true)
+
+      console.log("--for length--");
+      let fruits = ["Apple", "Banana", "Mango", "Orange", "Pepaya"];
+      for (let i = 0; i < fruits.length; i++) {
+        // 4 < 5 (true)
+        console.log(fruits[i]);
+        console.log(`${i + 1}. ${fruits[i]}`);
+      }
+
+      // ${nama} interpolation string
+
+      console.log("--for in--");
+      for (let fruit in fruits) {
+        console.log(fruit);
+      }
+
+      console.log("--for of--");
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+
+      let users = {
+        name: "JuaraCoding",
+        age: 24,
+        divisi: "Software Developer",
+      };
+      for (const key in users) {
+        console.log(key);
+      }
+      const departureSchedule = [
+        { kereta: "Papandayan", origin: "Jakarta", destination: "Bandung", time: "08:00" },
+        { kereta: "Parahiyangan", origin: "Jakarta", destination: "Bandung", time: "10:00" },
+        { kereta: "Papandayan", origin: "Bandung", destination: "Jakarta", time: "12:00" },
+        // More departure schedules...
+      ];
+      const origin = "Jakarta";
+      const destination = "Bandung";
+      const kereta = "PAPANDAYAN";
+      console.log(kereta.toLowerCase());
+      console.log("Kereta | Origin | Destination | Time");
+      for (const schedule of departureSchedule) {
+        if(schedule.kereta.toLowerCase() == kereta.toLowerCase()){
+            console.log(`${schedule.kereta} | ${schedule.origin} | ${schedule.destination} | ${schedule.time}`);
+        }
+        
+      }
+      
+
+    </script>
+  </body>
+</html>
